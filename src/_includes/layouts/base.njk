@@ -10,14 +10,9 @@
   <link rel="icon" href="/assets/images/favicon.ico" type="image/png" />
   <link rel="apple-touch-icon" href="/assets/images/favicon-192x192.png" type="image/png" />
 </head>
-<body  class="tmpl-home">
-  <header role="banner">
-  Header
-</header>
-  <main id="main-content"><h1>Hello eleventy !</h1>
-<h2>Does it work now ?!</h2></main>
-  <footer role="contentinfo">
-    Footer
-</footer>
+<body {% if templateClass %} class="{{ templateClass }}"{% endif %}>
+  {# {% include "partials/header.njk" %} #}
+  <main id="main-content">{{ content | safe }}</main>
+  {# {% include "partials/footer.njk" %} #}
 </body>
 </html>
