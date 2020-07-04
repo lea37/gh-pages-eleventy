@@ -3,8 +3,8 @@ module.exports = function(eleventyConfig) {
     
     return {
         dir: {
-            input: "./src/",
-            output: "./dist/",
+            input: "src",
+            output: "dist",
         },
         templateFormats : ["njk", "md", "html"]
     };
